@@ -5,7 +5,8 @@ a. Introduction - Course Roadmaps</br>
     - Setup Enviroment</br>
 b. Roadmap to the first App</br> 
     - Setup Dependecies berdasarkan Oprating System</br> 
-     Install ESLint</br> - Genrate React Native App</br>
+    - Install ESLint</br> 
+    - Genrate React Native App</br>
 
 # Got OSX Go Here</br>
 a. OSX Installation</br>
