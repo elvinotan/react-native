@@ -29,7 +29,7 @@ c. Emulator Creation and System Variables</br>
     - Doubel R to reaload simulator</br> 
     - Ctrl + M = Untuk membuka menu pada simulator</br> 
     
-# [Optional] ESLint Setup
+# ESLint Setup
     - Download Visual Studio Code
     - Install Plugin ESLint, Material Icon Theme, Prettier
 
