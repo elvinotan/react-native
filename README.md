@@ -302,6 +302,22 @@ AlbumDetail : single group tampilan </br>
 
 b. List Component Boilerplate
 ![Albumlist](https://github.com/elvinotan/react-native/blob/master/images/albumlist.png)</br>
+```
+/src/component/AlbumList.js
+import React from "react";
+import { View, Text } from "react-native";
+
+const AlbumList = () => {
+  return (
+    <View>
+      <Text>Album List</Text>
+    </View>
+  );
+};
+
+export default AlbumList;
+
+```
 
 c. Class Based Components
 d. Lifecycle Methods
