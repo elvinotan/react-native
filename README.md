@@ -297,8 +297,8 @@ export default Header;
 a. Sourcing Album Data</br>
 Sumber data : http://rallycoding.herokuapp.com/api/music_albums</br>
 Yg akan kita buat </br>
-AlbumList : Sceen atas yang mambil data dan render data per group</br>
-AlbumDetail : single group tampilan </br>
+AlbumList : Component atas yang mengambil data dan render data per group</br>
+AlbumDetail : single screen group tampilan </br>
 
 b. List Component Boilerplate
 ![Albumlist](https://github.com/elvinotan/react-native/blob/master/images/albumlist.png)</br>
@@ -319,7 +319,29 @@ export default AlbumList;
 
 ```
 
-c. Class Based Components
+c. Class Based Components</br>
+Component di bagi menjadi 2 : </br>
+Functional Component : Hanya berfungsi sebagai tampilan saja, terima masukan dan menghasilkan tampilan view (Stateless / Dumb) </br>
+Class Component : Terdapat logic, fetching data dan mengatur bagaiman component di tampilkan (stateful/smart)</br>
+![Componen Type](https://github.com/elvinotan/react-native/blob/master/images/componenttype.png)</br>
+Ubah Function Component to Class Component</br>
+```
+import React, { Component } from "react";
+import { View, Text } from "react-native";
+
+class AlbumList extends Component {
+  render() {
+    return (
+      <View>
+        <Text>Album List</Text>
+      </View>
+    );
+  }
+}
+
+export default AlbumList;
+```
+
 d. Lifecycle Methods
 e. Quick Note On Axios
 f. Network Requests
