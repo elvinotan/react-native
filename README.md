@@ -341,8 +341,15 @@ class AlbumList extends Component {
 
 export default AlbumList;
 ```
+d. Lifecycle Methods</br>
+React native memiliki byk lifecycle, beberapa di antaranya :</br>
+componentWillMount : Sebelum render di panggil</br>
+componentDidMount : Setelah render di panggil</br>
+componentWillUnMount : Sebelum screen di replace dgn tamilan lain</br>
+Untuk debug di react-native kita menggunakan console.log() yang akan muncul dalam mode debug ctrl+m Debug JS Remotely</br>
+gunakan command debugger to add break point</br>
 
-d. Lifecycle Methods
+
 e. Quick Note On Axios
 f. Network Requests
 g. Component Level State
