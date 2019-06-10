@@ -384,14 +384,47 @@ Probelm dengan Asynch</br>
 ![Component Level](https://github.com/elvinotan/react-native/blob/master/images/componenlevel.png)</br>
 
 h. More on Component Level State</br>
+State hanya berada pada class base component (Stateful) </br>
 State = Javascript Object yang di tujukan untuk render tampilan</br>
 setState({}) = Satu satunya cara untuk mengupdate isi dari state dan trigger render</br>
 Beda State dan Props = Props adalah data untuk komunikasi antara compoenent parent dengan anaknya, State adalah catatan behaviour dari component tsb</br>
 
+i. Rendering a List of Components</br>
+Setiap render list harus ada key, sebagai pembeda data, masukan yang sifatnya uniqe, seperti PK bila tidak ada gunakan loop key</br>
+Bila return 1 line tidak perlu pakai return, tp bila pake {} harus menggunakan return</br>
+```
+import React, { Component } from "react";
+import { View, Text } from "react-native";
+import axios from "axios";
+
+class AlbumList extends Component {
+  state = {
+    albums: []
+  };
+
+  componentWillMount() {
+    console.log("Calling component will mount");
+    axios
+      .get("https://rallycoding.herokuapp.com/api/music_albums")
+      .then(response => this.setState({ albums: response.data }));
+  }
+
+  renderAlbums() {
+    return this.state.albums.map((album, i) => {
+      return <Text key={i}>{album.title}</Text>;
+    });
+  }
+
+  render() {
+    return <View>{this.renderAlbums()}</View>;
+  }
+}
+
+export default AlbumList;
+```
 
 
 
-i. Rendering a List of Components
 j. Displaying Individual Albums
 k. Fantastic Reusable Components - The Card
 l. Styling a Card
