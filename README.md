@@ -72,7 +72,7 @@ const App = () => {
 
 // Render it to the device
 ```
-e Registering a Component </br> 
+e. Registering a Component </br> 
 ```
 ReactNative.AppRegistry.registerComponent("albums", () => App);
 ```
@@ -91,7 +91,7 @@ const App = () => {
 // Render it to the device
 ReactNative.AppRegistry.registerComponent("albums", () => App);
 ```
-f Destructuring Imports
+f. Destructuring Imports</br>
 ```
 // Import a Libraray to help create component
 import React from "react";
@@ -103,3 +103,5 @@ const App = () => <Text>Some Text</Text>;
 // Render it to the device
 AppRegistry.registerComponent("albums", () => App);
 ```
+g. Application Outline</br>
+![Inversion of Control and Dependency Injection](https://github.com/elvinotan/react-native/blob/master/images/outline.gif)</br>
