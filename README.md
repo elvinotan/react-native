@@ -349,9 +349,37 @@ componentWillUnMount : Sebelum screen di replace dgn tamilan lain</br>
 Untuk debug di react-native kita menggunakan console.log() yang akan muncul dalam mode debug ctrl+m Debug JS Remotely</br>
 gunakan command debugger to add break point</br>
 
+e. Quick Note On Axios</br>
+Axios network framework for feching network resource</br>
 
-e. Quick Note On Axios
 f. Network Requests
+Install Axios ```npm install --save axios```
+```
+src/component/AlbumList.js
+import React, { Component } from "react";
+import { View, Text } from "react-native";
+import axios from "axios";
+
+class AlbumList extends Component {
+  componentWillMount() {
+    console.log("Calling component will mount");
+    axios
+      .get("https://rallycoding.herokuapp.com/api/music_albums")
+      .then(response => console.log(response));
+  }
+
+  render() {
+    return (
+      <View>    
+        <Text>Album List</Text>
+      </View>
+    );
+  }
+}
+
+export default AlbumList;
+```
+
 g. Component Level State
 h. Rendering a List of Components
 i. Displaying Individual Albums
