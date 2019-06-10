@@ -297,8 +297,8 @@ export default Header;
 a. Sourcing Album Data</br>
 Sumber data : http://rallycoding.herokuapp.com/api/music_albums</br>
 Yg akan kita buat </br>
-AlbumList : Sceen atas yang mambil data dan render data per group</br>
-AlbumDetail : single group tampilan </br>
+AlbumList : Component atas yang mengambil data dan render data per group</br>
+AlbumDetail : single screen group tampilan </br>
 
 b. List Component Boilerplate
 ![Albumlist](https://github.com/elvinotan/react-native/blob/master/images/albumlist.png)</br>
@@ -319,10 +319,67 @@ export default AlbumList;
 
 ```
 
-c. Class Based Components
-d. Lifecycle Methods
-e. Quick Note On Axios
+c. Class Based Components</br>
+Component di bagi menjadi 2 : </br>
+Functional Component : Hanya berfungsi sebagai tampilan saja, terima masukan dan menghasilkan tampilan view (Stateless / Dumb) </br>
+Class Component : Terdapat logic, fetching data dan mengatur bagaiman component di tampilkan (stateful/smart)</br>
+![Componen Type](https://github.com/elvinotan/react-native/blob/master/images/componenttype.png)</br>
+Ubah Function Component to Class Component</br>
+```
+import React, { Component } from "react";
+import { View, Text } from "react-native";
+
+class AlbumList extends Component {
+  render() {
+    return (
+      <View>
+        <Text>Album List</Text>
+      </View>
+    );
+  }
+}
+
+export default AlbumList;
+```
+d. Lifecycle Methods</br>
+React native memiliki byk lifecycle, beberapa di antaranya :</br>
+componentWillMount : Sebelum render di panggil</br>
+componentDidMount : Setelah render di panggil</br>
+componentWillUnMount : Sebelum screen di replace dgn tamilan lain</br>
+Untuk debug di react-native kita menggunakan console.log() yang akan muncul dalam mode debug ctrl+m Debug JS Remotely</br>
+gunakan command debugger to add break point</br>
+
+e. Quick Note On Axios</br>
+Axios network framework for feching network resource</br>
+
 f. Network Requests
+Install Axios ```npm install --save axios```
+```
+src/component/AlbumList.js
+import React, { Component } from "react";
+import { View, Text } from "react-native";
+import axios from "axios";
+
+class AlbumList extends Component {
+  componentWillMount() {
+    console.log("Calling component will mount");
+    axios
+      .get("https://rallycoding.herokuapp.com/api/music_albums")
+      .then(response => console.log(response));
+  }
+
+  render() {
+    return (
+      <View>    
+        <Text>Album List</Text>
+      </View>
+    );
+  }
+}
+
+export default AlbumList;
+```
+
 g. Component Level State
 h. Rendering a List of Components
 i. Displaying Individual Albums
