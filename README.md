@@ -31,7 +31,7 @@ c. Emulator Creation and System Variables</br>
     
 # ESLint Setup</br> 
  a. Download Visual Studio Code</br> 
- b. Install Plugin ESLint, Material Icon Theme, Prettier</br> 
+ Install Plugin ESLint, Material Icon Theme, Prettier</br> 
 
 # Onwards!</br> 
 a.  Project Directory Walkthrough : </br> Secara otomatis akan create Opration System dependencies android dan ios, ada juga node_modules, ini adalah module yang sifatnya global atau plugin yang app gunakan. Index.js starting point aplikasi kita
