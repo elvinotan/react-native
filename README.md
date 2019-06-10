@@ -379,8 +379,10 @@ class AlbumList extends Component {
 
 export default AlbumList;
 ```
+g. Component Level State</br>
+Probelm dengan Asynch</br>
+![Component Level](https://github.com/elvinotan/react-native/blob/master/images/componentlevel.png)</br>
 
-g. Component Level State
 h. Rendering a List of Components
 i. Displaying Individual Albums
 j. Fantastic Reusable Components - The Card
