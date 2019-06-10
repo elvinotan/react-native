@@ -445,10 +445,9 @@ export default AlbumDetail;
   }
 ```
 
-
-
-
 k. Fantastic Reusable Components - The Card
+![Template](https://github.com/elvinotan/react-native/blob/master/images/template.png)</br>
+
 l. Styling a Card
 m. Passing Components as Props
 n. Dividing Cards into Sections
