@@ -135,10 +135,7 @@ import Header from "./src/components/header";
 // Create Component
 const App = () => {
   return (
-    <View>
-      <Header />
-      <Text>Some Text</Text>
-    </View>
+    <Header />
   );
 };
 
