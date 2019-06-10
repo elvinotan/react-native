@@ -206,3 +206,89 @@ Flex box untuk re-position component (Flexbox is a system of positioning element
 Secara default posisi component berada di left top container</br>
 justifyContent : Vertical ('flex-start', 'center', 'flex-end')</br>
 alignItems: Horizontal ('flex-start', 'center', 'flex-end')</br>
+
+d. Header Styling</br>
+Terapakan alignment pada View </br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text, View } from "react-native";
+
+// Make a component
+const Header = () => {
+  const { textStyle, viewStyle } = styles;
+  
+  return (
+    <View style={viewStyle}>
+        <Text style={textStyle}>Albums</Text>
+    </View>
+  );
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    },
+    viewStyle : {
+        backgroundColor: '#F8F8F8',
+        justifyContent : 'cener',
+        alignItems : 'center',
+        height: 60,
+        paddingTop : 15,
+        shadowColor : '#000', // Warna shadow
+        shadowOffset: { width : 0, height:2 }, // lebar shadow
+        shadowOpacity : 0.2, // transparansi, nilai antara 0 - 1
+        elevation:2,
+        position:'relative'
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
+e. Making the header Reuseable</br>
+Perpindahan data lewat props adalah ide utama untuk buat reuseable component</br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text, View } from "react-native";
+
+// Make a component
+const Header = (props) => {
+  const { textStyle, viewStyle } = styles;
+  
+  return (
+    <View style={viewStyle}>
+        <Text style={textStyle}>{props.headerText}</Text>
+    </View>
+  );
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    },
+    viewStyle : {
+        backgroundColor: '#F8F8F8',
+        justifyContent : 'cener',
+        alignItems : 'center',
+        height: 60,
+        paddingTop : 15,
+        shadowColor : '#000', // Warna shadow
+        shadowOffset: { width : 0, height:2 }, // lebar shadow
+        shadowOpacity : 0.2, // transparansi, nilai antara 0 - 1
+        elevation:2,
+        position:'relative'
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+
+
+<Header headerText={'Albums'} />
+```
