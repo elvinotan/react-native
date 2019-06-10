@@ -104,4 +104,4 @@ const App = () => <Text>Some Text</Text>;
 AppRegistry.registerComponent("albums", () => App);
 ```
 g. Application Outline</br>
-![Inversion of Control and Dependency Injection](https://github.com/elvinotan/react-native/blob/master/images/outline.gif)</br>
+![Inversion of Control and Dependency Injection](https://github.com/elvinotan/react-native/blob/master/images/outline.png)</br>
