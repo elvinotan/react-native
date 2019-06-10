@@ -445,7 +445,8 @@ export default AlbumDetail;
   }
 ```
 
-k. Fantastic Reusable Components - The Card
+k. Fantastic Reusable Components </br>
+Reuseable component The Card and The CardSection</br>
 ![Template](https://github.com/elvinotan/react-native/blob/master/images/template.png)</br>
 
 l. Styling a Card
