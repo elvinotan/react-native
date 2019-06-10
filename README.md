@@ -480,5 +480,21 @@ const styles = {
 export default Card;
 ```
 
-m. Passing Components as Props
+m. Passing Components as Props</br>
+Setiap Content suatu tag di passing, dia akan masuk ke property yang bernama children</br>
+```
+const Card = ({ children }) => {
+  const { containerStyle } = styles;
+  return <View style={containerStyle}>{children}</View>;
+};
+```
+```
+  return (
+    <Card>
+      <Text>{title}</Text>
+    </Card>
+  );
+```
+
+
 n. Dividing Cards into Sections
