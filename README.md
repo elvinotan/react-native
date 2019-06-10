@@ -76,8 +76,8 @@ e Registering a Component </br>
 ```
 ReactNative.AppRegistry.registerComponent("albums", () => App);
 ```
-    - Untuk parameter pertama/appKey merupakan string yang nilainya harus sama dgn project name </br> 
-    - Untuk paramter kedua harus return function atau ui </br> 
+Untuk parameter pertama/appKey merupakan string yang nilainya harus sama dgn project name </br> 
+Untuk paramter kedua harus return function atau ui </br> 
 ```
 // Import a Libraray to help create component
 import React from "react";
