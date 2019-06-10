@@ -122,4 +122,26 @@ const Header = () => {
 // Make the componenet avaiable to other parts of the app
 export default Header;
 ```
-Agar suatu component dapat di gunakan oleh component lain, maka kita harus meng-export agar komponen lain dapat meng-import. Default menandakan class utama
+Agar suatu component dapat di gunakan oleh component lain, maka kita harus meng-export agar komponen lain dapat meng-import. Default menandakan class utama</br>
+
+i. Consuming File Exports</br>
+Kita akan gunakan component Header yang baru saja kita buat</br>
+```
+// Import a Libraray to help create component
+import React from "react";
+import { Text, View, AppRegistry } from "react-native";
+import Header from "./src/components/header";
+
+// Create Component
+const App = () => {
+  return (
+    <View>
+      <Header />
+      <Text>Some Text</Text>
+    </View>
+  );
+};
+
+// Render it to the device
+AppRegistry.registerComponent("albums", () => App);
+```
