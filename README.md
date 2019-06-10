@@ -72,7 +72,7 @@ const App = () => {
 
 // Render it to the device
 ```
-e Registering a Component </br> 
+e. Registering a Component </br> 
 ```
 ReactNative.AppRegistry.registerComponent("albums", () => App);
 ```
@@ -91,7 +91,7 @@ const App = () => {
 // Render it to the device
 ReactNative.AppRegistry.registerComponent("albums", () => App);
 ```
-f Destructuring Imports
+f. Destructuring Imports</br>
 ```
 // Import a Libraray to help create component
 import React from "react";
@@ -103,3 +103,214 @@ const App = () => <Text>Some Text</Text>;
 // Render it to the device
 AppRegistry.registerComponent("albums", () => App);
 ```
+g. Application Outline</br>
+![Outline](https://github.com/elvinotan/react-native/blob/master/images/outline.png)</br>
+
+h. The Header Component</br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text } from "react-native";
+
+// Make a component
+const Header = () => {
+  return <Text>Albums</Text>;
+};
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
+Agar suatu component dapat di gunakan oleh component lain, maka kita harus meng-export agar komponen lain dapat meng-import. Default menandakan class utama</br>
+
+i. Consuming File Exports</br>
+Kita akan gunakan component Header yang baru saja kita buat</br>
+```
+// Import a Libraray to help create component
+import React from "react";
+import { Text, View, AppRegistry } from "react-native";
+import Header from "./src/components/header";
+
+// Create Component
+const App = () => {
+  return (
+    <Header />
+  );
+};
+
+// Render it to the device
+AppRegistry.registerComponent("albums", () => App);
+```
+# Making Great Looking Apps</br>
+a. Styling with React Native</br>
+Cara Penerapan style pada react native</br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text } from "react-native";
+
+// Make a component
+const Header = () => {
+  const { textStyle } = styles;
+  
+  return <Text style={textStyle}>Albums</Text>;
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
+b. More on Styling Components</br>
+Siapkan View yang akan meng-wrap component untuk reposition child component</br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text, View } from "react-native";
+
+// Make a component
+const Header = () => {
+  const { textStyle, viewStyle } = styles;
+  
+  return (
+    <View style={viewStyle}>
+        <Text style={textStyle}>Albums</Text>
+    </View>
+  );
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    },
+    viewStyle : {
+        backgroundColor: '#F8F8F8',
+        
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
+c. Introduction to Fexbox</br>
+Flex box untuk re-position component (Flexbox is a system of positioning elements within the container)</br>
+Secara default posisi component berada di left top container</br>
+justifyContent : Vertical ('flex-start', 'center', 'flex-end')</br>
+alignItems: Horizontal ('flex-start', 'center', 'flex-end')</br>
+
+d. Header Styling</br>
+Terapakan alignment pada View </br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text, View } from "react-native";
+
+// Make a component
+const Header = () => {
+  const { textStyle, viewStyle } = styles;
+  
+  return (
+    <View style={viewStyle}>
+        <Text style={textStyle}>Albums</Text>
+    </View>
+  );
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    },
+    viewStyle : {
+        backgroundColor: '#F8F8F8',
+        justifyContent : 'cener',
+        alignItems : 'center',
+        height: 60,
+        paddingTop : 15,
+        shadowColor : '#000', // Warna shadow
+        shadowOffset: { width : 0, height:2 }, // lebar shadow
+        shadowOpacity : 0.2, // transparansi, nilai antara 0 - 1
+        elevation:2,
+        position:'relative'
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
+e. Making the header Reuseable</br>
+Perpindahan data lewat props adalah ide utama untuk buat reuseable component</br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text, View } from "react-native";
+
+// Make a component
+const Header = (props) => {
+  const { textStyle, viewStyle } = styles;
+  
+  return (
+    <View style={viewStyle}>
+        <Text style={textStyle}>{props.headerText}</Text>
+    </View>
+  );
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    },
+    viewStyle : {
+        backgroundColor: '#F8F8F8',
+        justifyContent : 'cener',
+        alignItems : 'center',
+        height: 60,
+        paddingTop : 15,
+        shadowColor : '#000', // Warna shadow
+        shadowOffset: { width : 0, height:2 }, // lebar shadow
+        shadowOpacity : 0.2, // transparansi, nilai antara 0 - 1
+        elevation:2,
+        position:'relative'
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+
+
+<Header headerText={'Albums'} />
+```
+
+# HTTP Requests with React Native</br>
+a. Sourcing Album Data</br>
+Sumber data : http://rallycoding.herokuapp.com/api/music_albums</br>
+Yg akan kita buat </br>
+AlbumList : Sceen atas yang mambil data dan render data per group</br>
+AlbumDetail : single group tampilan </br>
+
+b. List Component Boilerplate
+![Albumlist](https://github.com/elvinotan/react-native/blob/master/images/albumlist.png)</br>
+
+c. Class Based Components
+d. Lifecycle Methods
+e. Quick Note On Axios
+f. Network Requests
+g. Component Level State
+h. Rendering a List of Components
+i. Displaying Individual Albums
+j. Fantastic Reusable Components - The Card
+k. Styling a Card
+l. Passing Components as Props
+m. Dividing Cards into Sections
