@@ -35,9 +35,9 @@ c. Emulator Creation and System Variables</br>
 
 # Onwards!</br> 
 a.  Project Directory Walkthrough : </br> 
-Secara otomatis akan create Opration System dependencies android dan ios, ada juga node_modules, ini adalah module yang sifatnya global atau plugin yang app gunakan. Index.js starting point aplikasi kita.
+Secara otomatis akan create Opration System dependencies android dan ios, ada juga node_modules, ini adalah module yang sifatnya global atau plugin yang app gunakan. Index.js starting point aplikasi kita.</br>
 b. Getting Content on the Screen :</br>
-    - Setiap menampilkan data harus menggunakan component
+    - Setiap menampilkan data harus menggunakan component</br>
 ```
 // Import a Libraray to help create component
 import React from "react";
