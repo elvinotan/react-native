@@ -169,7 +169,7 @@ const styles = {
 export default Header;
 ```
 b. More on Styling Components</br>
-Gunakan View untuk alignment Header Text
+Siapkan View yang akan meng-wrap component untuk reposition child component</br>
 ```
 /src/component/header.js
 
@@ -201,3 +201,8 @@ const styles = {
 // Make the componenet avaiable to other parts of the app
 export default Header;
 ```
+c. Introduction to Fexbox</br>
+Flex box untuk re-position component (Flexbox is a system of positioning elements within the container)</br>
+Secara default posisi component berada di left top container</br>
+justifyContent : Vertical ('flex-start', 'center', 'flex-end')</br>
+alignItems: Horizontal ('flex-start', 'center', 'flex-end')</br>
