@@ -301,6 +301,8 @@ AlbumList : Sceen atas yang mambil data dan render data per group</br>
 AlbumDetail : single group tampilan </br>
 
 b. List Component Boilerplate
+![Albumlist](https://github.com/elvinotan/react-native/blob/master/images/albumlist.png)</br>
+
 c. Class Based Components
 d. Lifecycle Methods
 e. Quick Note On Axios
