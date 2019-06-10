@@ -294,7 +294,12 @@ export default Header;
 ```
 
 # HTTP Requests with React Native</br>
-a. Sourcing Album Data
+a. Sourcing Album Data</br>
+Sumber data : http://rallycoding.herokuapp.com/api/music_albums</br>
+Yg akan kita buat </br>
+AlbumList : Sceen atas yang mambil data dan render data per group</br>
+AlbumDetail : single group tampilan </br>
+
 b. List Component Boilerplate
 c. Class Based Components
 d. Lifecycle Methods
