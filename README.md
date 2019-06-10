@@ -91,3 +91,15 @@ const App = () => {
 // Render it to the device
 ReactNative.AppRegistry.registerComponent("albums", () => App);
 ```
+f Destructuring Imports
+```
+// Import a Libraray to help create component
+import React from "react";
+import { Text, AppRegistry } from "react-native"; //Destructuring
+
+// Create Component, persingkat coding
+const App = () => <Text>Some Text</Text>;
+
+// Render it to the device
+AppRegistry.registerComponent("albums", () => App);
+```
