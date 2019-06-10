@@ -450,5 +450,35 @@ Reuseable component The Card and The CardSection</br>
 ![Template](https://github.com/elvinotan/react-native/blob/master/images/template.png)</br>
 
 l. Styling a Card
+```
+import React from "react";
+import { View } from "react-native";
+
+const Card = () => {
+  const { containerStyle } = styles;
+    return <View  style={containerStyle}/>;
+};
+
+const styles = {
+    containerStyle = {
+        borderWidth:1, // kasih border
+        borderRadius:2, // Setiap corner di buat round
+        borderColor: '#DDD', // Gray border
+        borderBottomWidth:0,
+        shadowColor:'#000',
+        shadowOffset:{width:0, height:2}, // height shadow
+        shadowOpacity:0.1, // transparansi
+        shadowRadius:2, // kaya borderRadius
+        elevation:1, // Fly effect
+        marginLeft:5, // Jarak kiri
+        marginRight:5, // Jarak Kanan
+        marginTop:10 // Jarak atas
+
+    }
+}
+
+export default Card;
+```
+
 m. Passing Components as Props
 n. Dividing Cards into Sections
