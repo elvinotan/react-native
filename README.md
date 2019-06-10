@@ -34,5 +34,17 @@ c. Emulator Creation and System Variables</br>
  Install Plugin ESLint, Material Icon Theme, Prettier</br> 
 
 # Onwards!</br> 
-a.  Project Directory Walkthrough : </br> Secara otomatis akan create Opration System dependencies android dan ios, ada juga node_modules, ini adalah module yang sifatnya global atau plugin yang app gunakan. Index.js starting point aplikasi kita
+a.  Project Directory Walkthrough : </br> 
+Secara otomatis akan create Opration System dependencies android dan ios, ada juga node_modules, ini adalah module yang sifatnya global atau plugin yang app gunakan. Index.js starting point aplikasi kita.
+b. Getting Content on the Screen :</br>
+    - Setiap menampilkan data harus menggunakan component
+```
+// Import a Libraray to help create component
+import React from "react";
+import ReactNative from "react-native";
+
+// Create Component
+
+// Render it to the device
+```
        
