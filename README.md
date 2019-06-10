@@ -142,3 +142,62 @@ const App = () => {
 // Render it to the device
 AppRegistry.registerComponent("albums", () => App);
 ```
+# Making Great Looking Apps</br>
+a. Styling with React Native</br>
+Cara Penerapan style pada react native</br>
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text } from "react-native";
+
+// Make a component
+const Header = () => {
+  const { textStyle } = styles;
+  
+  return <Text style={textStyle}>Albums</Text>;
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
+b. More on Styling Components</br>
+Gunakan View untuk alignment Header Text
+```
+/src/component/header.js
+
+// Import libraries for makeing a component
+import React from "react";
+import { Text, View } from "react-native";
+
+// Make a component
+const Header = () => {
+  const { textStyle, viewStyle } = styles;
+  
+  return (
+    <View style={viewStyle}>
+        <Text style={textStyle}>Albums</Text>
+    </View>
+  );
+};
+
+const styles = {
+    textStyle:{
+        fontSize : 20
+    },
+    viewStyle : {
+        backgroundColor: '#F8F8F8',
+        
+    }
+}
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
