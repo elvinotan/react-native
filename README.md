@@ -108,6 +108,8 @@ g. Application Outline</br>
 
 h. The Header Component</br>
 ```
+/src/component/header.js
+
 // Import libraries for makeing a component
 import React from "react";
 import { Text } from "react-native";
