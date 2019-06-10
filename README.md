@@ -292,3 +292,18 @@ export default Header;
 
 <Header headerText={'Albums'} />
 ```
+
+# HTTP Requests with React Native</br>
+a. Sourcing Album Data
+b. List Component Boilerplate
+c. Class Based Components
+d. Lifecycle Methods
+e. Quick Note On Axios
+f. Network Requests
+g. Component Level State
+h. Rendering a List of Components
+i. Displaying Individual Albums
+j. Fantastic Reusable Components - The Card
+k. Styling a Card
+l. Passing Components as Props
+m. Dividing Cards into Sections
