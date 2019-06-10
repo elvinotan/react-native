@@ -390,7 +390,7 @@ setState({}) = Satu satunya cara untuk mengupdate isi dari state dan trigger ren
 Beda State dan Props = Props adalah data untuk komunikasi antara compoenent parent dengan anaknya, State adalah catatan behaviour dari component tsb</br>
 
 i. Rendering a List of Components</br>
-Setiap render list harus ada key, sebagai pembeda data, masukan yang sifatnya uniqe, seperti PK bila tidak ada gunakan loop key</br>
+Setiap render list harus ada key, sebagai pembeda data, masukan yang sifatnya uniqe, seperti PK</br>
 Bila return 1 line tidak perlu pakai return, tp bila pake {} harus menggunakan return</br>
 ```
 import React, { Component } from "react";
@@ -422,10 +422,32 @@ class AlbumList extends Component {
 
 export default AlbumList;
 ```
+j. Displaying Individual Albums</br>
+Cara menggunkan props dari parent ke anaknya</br>
+```
+/scr/component/AlbumDetail.js
+import React from "react";
+import { View, Text } from "react-native";
+
+const AlbumDetail = ({ album }) => {
+  const { title } = album;
+  return <Text>{title}</Text>;
+};
+
+export default AlbumDetail;
+
+```
+```
+  renderAlbums() {
+    return this.state.albums.map((album, i) => {
+      return <AlbumDetail key={album.title} album={album} />;
+    });
+  }
+```
 
 
 
-j. Displaying Individual Albums
+
 k. Fantastic Reusable Components - The Card
 l. Styling a Card
 m. Passing Components as Props
