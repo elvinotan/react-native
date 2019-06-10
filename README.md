@@ -28,3 +28,5 @@ c. Emulator Creation and System Variables</br>
     - Jalankan Emulator react-native run-android</br> 
     - Doubel R to reaload simulator</br> 
     - Ctrl + M = Untuk membuka menu pada simulator</br> 
+    
+# [Optional] ESLint Setup
