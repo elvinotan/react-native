@@ -383,9 +383,17 @@ g. Component Level State</br>
 Probelm dengan Asynch</br>
 ![Component Level](https://github.com/elvinotan/react-native/blob/master/images/componenlevel.png)</br>
 
-h. Rendering a List of Components
-i. Displaying Individual Albums
-j. Fantastic Reusable Components - The Card
-k. Styling a Card
-l. Passing Components as Props
-m. Dividing Cards into Sections
+h. More on Component Level State</br>
+State = Javascript Object yang di tujukan untuk render tampilan</br>
+setState({}) = Satu satunya cara untuk mengupdate isi dari state dan trigger render</br>
+Beda State dan Props = Props adalah data untuk komunikasi antara compoenent parent dengan anaknya, State adalah catatan behaviour dari component tsb</br>
+
+
+
+
+i. Rendering a List of Components
+j. Displaying Individual Albums
+k. Fantastic Reusable Components - The Card
+l. Styling a Card
+m. Passing Components as Props
+n. Dividing Cards into Sections
