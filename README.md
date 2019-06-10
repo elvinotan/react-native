@@ -104,4 +104,20 @@ const App = () => <Text>Some Text</Text>;
 AppRegistry.registerComponent("albums", () => App);
 ```
 g. Application Outline</br>
-![Inversion of Control and Dependency Injection](https://github.com/elvinotan/react-native/blob/master/images/outline.png)</br>
+![Outline](https://github.com/elvinotan/react-native/blob/master/images/outline.png)</br>
+
+h. The Header Component</br>
+```
+// Import libraries for makeing a component
+import React from "react";
+import { Text } from "react-native";
+
+// Make a component
+const Header = () => {
+  return <Text>Albums</Text>;
+};
+
+// Make the componenet avaiable to other parts of the app
+export default Header;
+```
+Agar suatu component dapat di gunakan oleh component lain, maka kita harus meng-export agar komponen lain dapat meng-import. Default menandakan class utama
