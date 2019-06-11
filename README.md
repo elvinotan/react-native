@@ -1,3 +1,4 @@
+Depricated/ Tidak ke pake refer ke react-native-albums
 # React Native
 
 # Dive Right in
